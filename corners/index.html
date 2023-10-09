@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON Tables</title>
+    <title>JSON Tables with Normalized Sums</title>
     <style>
         table {
             border-collapse: collapse;
@@ -22,93 +22,41 @@
     </style>
 </head>
 <body>
-    <h2>Sum of Corners Get</h2>
+    <h2>Normalized Sum of Corners Get</h2>
     <table id="cornersGetTable">
         <thead>
             <tr>
                 <th>Team Name</th>
-                <th>Sum of Corners Get</th>
+                <th>Normalized Sum of Corners Get</th>
             </tr>
         </thead>
         <tbody></tbody>
     </table>
 
-    <h2>Sum of Corners Lost</h2>
+    <h2>Normalized Sum of Corners Lost</h2>
     <table id="cornersLostTable">
         <thead>
             <tr>
                 <th>Team Name</th>
-                <th>Sum of Corners Lost</th>
+                <th>Normalized Sum of Corners Lost</th>
             </tr>
         </thead>
         <tbody></tbody>
     </table>
 
-    <script>
-        // Function to calculate the sum of an array
-        function calculateSum(array) {
-            return array.reduce((sum, value) => sum + value, 0);
-        }
+    <h2>Game Sums</h2>
+    <table id="gameSumsTable">
+        <thead>
+            <tr>
+                <th>Game Name</th>
+                <th>For Home Team</th>
+                <th>For Away Team</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
-        // Fetch the JSON data from combined.json
-        fetch('combined.json')
-            .then(response => response.json())
-            .then(data => {
-                // Flatten the JSON data and create arrays for sums of Corners Get and Corners Lost
-                const sumsCornersGet = [];
-                const sumsCornersLost = [];
-
-                data.forEach(item => {
-                    const name1 = item.team1 && item.team1.name ? item.team1.name : '';
-                    const sumCornersGet1 = item.team1 && item.team1.cornersGet ? calculateSum(item.team1.cornersGet) : 0;
-                    const sumCornersLost1 = item.team1 && item.team1.cornersLost ? calculateSum(item.team1.cornersLost) : 0;
-
-                    if (sumCornersGet1 > 0) {
-                        sumsCornersGet.push({ name: name1, sum: sumCornersGet1 });
-                    }
-                    if (sumCornersLost1 > 0) {
-                        sumsCornersLost.push({ name: name1, sum: sumCornersLost1 });
-                    }
-
-                    const name2 = item.team2 && item.team2.name ? item.team2.name : '';
-                    const sumCornersGet2 = item.team2 && item.team2.cornersGet ? calculateSum(item.team2.cornersGet) : 0;
-                    const sumCornersLost2 = item.team2 && item.team2.cornersLost ? calculateSum(item.team2.cornersLost) : 0;
-
-                    if (sumCornersGet2 > 0) {
-                        sumsCornersGet.push({ name: name2, sum: sumCornersGet2 });
-                    }
-                    if (sumCornersLost2 > 0) {
-                        sumsCornersLost.push({ name: name2, sum: sumCornersLost2 });
-                    }
-                });
-
-                // Sort the sums tables by sum in descending order
-                sumsCornersGet.sort((a, b) => b.sum - a.sum);
-                sumsCornersLost.sort((a, b) => b.sum - a.sum);
-
-                // Create and populate the Corners Get table
-                const cornersGetTableBody = document.querySelector('#cornersGetTable tbody');
-                sumsCornersGet.forEach(team => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${team.name || '-'}</td>
-                        <td>${team.sum}</td>
-                    `;
-                    cornersGetTableBody.appendChild(row);
-                });
-
-                // Create and populate the Corners Lost table
-                const cornersLostTableBody = document.querySelector('#cornersLostTable tbody');
-                sumsCornersLost.forEach(team => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${team.name || '-'}</td>
-                        <td>${team.sum}</td>
-                    `;
-                    cornersLostTableBody.appendChild(row);
-                });
-            })
-            .catch(error => console.error('Error loading JSON:', error));
-    </script>
+    
+    <script src="advancing.js"></script>
 </body>
 </html>
