@@ -1,0 +1,13 @@
+{
+  "team2": {
+    "name": "Brighton @ Away",
+    "cornersGet": [
+      10,
+      10
+    ],
+    "cornersLost": [
+      19,
+      19
+    ]
+  }
+}

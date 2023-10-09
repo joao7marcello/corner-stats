@@ -1,0 +1,24 @@
+{
+  "team1": {
+    "name": "Luton @ Home",
+    "cornersGet": [
+      10,
+      19
+    ],
+    "cornersLost": [
+      10,
+      19
+    ]
+  },
+  "team2": {
+    "name": "Tottenham @ Away",
+    "cornersGet": [
+      19,
+      19
+    ],
+    "cornersLost": [
+      10,
+      19
+    ]
+  }
+}

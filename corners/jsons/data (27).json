@@ -1,0 +1,13 @@
+{
+  "team1": {
+    "name": "Nottm Forest @ Home",
+    "cornersGet": [
+      0,
+      26
+    ],
+    "cornersLost": [
+      13,
+      64
+    ]
+  }
+}

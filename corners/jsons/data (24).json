@@ -1,0 +1,13 @@
+{
+  "team1": {
+    "name": "Liverpool @ Home",
+    "cornersGet": [
+      51,
+      38
+    ],
+    "cornersLost": [
+      13,
+      13
+    ]
+  }
+}
