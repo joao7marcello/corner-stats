@@ -1,0 +1,236 @@
+[
+  {
+    "team1": {
+      "name": "Eintracht Frankfurt @ Home",
+      "cornersGet": [49, 16],
+      "cornersLost": [16, 0]
+    },
+    "team2": {
+      "name": "Heidenheim @ Away",
+      "cornersGet": [28, 28],
+      "cornersLost": [13, 27]
+    }
+  },
+  {
+    "team1": {
+      "name": "Bayern Munich @ Home",
+      "cornersGet": [31, 72],
+      "cornersLost": [20, 20]
+    },
+    "team2": {
+      "name": "SC Freiburg @ Away",
+      "cornersGet": [31, 21],
+      "cornersLost": [0, 10]
+    }
+  },
+  {
+    "team1": {
+      "name": "Bayer Leverkusen @ Home",
+      "cornersGet": [16, 66],
+      "cornersLost": [0, 16]
+    },
+    "team2": {
+      "name": "Cologne @ Away",
+      "cornersGet": [52, 41],
+      "cornersLost": [10, 51]
+    }
+  },
+  {
+    "team1": {
+      "name": "Werder Bremen @ Home",
+      "cornersGet": [41, 41],
+      "cornersLost": [28, 96]
+    },
+    "team2": {
+      "name": "TSG Hoffenheim @ Away",
+      "cornersGet": [31, 11],
+      "cornersLost": [30, 10]
+    }
+  },
+  {
+    "team1": {
+      "name": "Borussia Dortmund @ Home",
+      "cornersGet": [14, 55],
+      "cornersLost": [27, 0]
+    },
+    "team2": {
+      "name": "Union Berlin @ Away",
+      "cornersGet": [41, 11],
+      "cornersLost": [0, 41]
+    }
+  },
+  {
+    "team1": {
+      "name": "RB Leipzig @ Home",
+      "cornersGet": [14, 0],
+      "cornersLost": [27, 0]
+    },
+    "team2": {
+      "name": "Bochum @ Away",
+      "cornersGet": [31, 31],
+      "cornersLost": [0, 10]
+    }
+  },
+  {
+    "team1": {
+      "name": "Augsburg @ Home",
+      "cornersGet": [21, 11],
+      "cornersLost": [41, 41]
+    },
+    "team2": {
+      "name": "Darmstadt @ Away",
+      "cornersGet": [11, 0],
+      "cornersLost": [51, 10]
+    }
+  },
+  {
+    "team1": {
+      "name": "VfB Stuttgart @ Home",
+      "cornersGet": [21, 31],
+      "cornersLost": [10, 10]
+    },
+    "team2": {
+      "name": "Wolfsburg @ Away",
+      "cornersGet": [31, 31],
+      "cornersLost": [20, 30]
+    }
+  },
+  {
+    "team1": {
+      "name": "Mainz @ Away",
+      "cornersGet": [0, 1],
+      "cornersLost": [0, 41]
+    },
+    "team2": {
+      "name": "Borussia Monchengladbach @ Home",
+      "cornersGet": [14, 41],
+      "cornersLost": [54, 28]
+    }
+  },
+  {
+    "team2": {
+      "name": "Bayer Leverkusen @ Away",
+      "cornersGet": [21, 21],
+      "cornersLost": [0, 51]
+    }
+  },
+  {
+    "team2": {
+      "name": "VfB Stuttgart @ Away",
+      "cornersGet": [11, 11],
+      "cornersLost": [20, 10]
+    }
+  },
+  {
+    "team2": {
+      "name": "Bayern Munich @ Away",
+      "cornersGet": [21, 41],
+      "cornersLost": [0, 1]
+    }
+  },
+  {
+    "team2": {
+      "name": "Borussia Dortmund @ Away",
+      "cornersGet": [21, 52],
+      "cornersLost": [10, 51]
+    }
+  },
+  {
+    "team2": {
+      "name": "RB Leipzig @ Away",
+      "cornersGet": [41, 41],
+      "cornersLost": [0, 13]
+    }
+  },
+  {
+    "team2": {
+      "name": "Eintracht Frankfurt @ Away",
+      "cornersGet": [11, 11],
+      "cornersLost": [20, 10]
+    }
+  },
+  {
+    "team2": {
+      "name": "Borussia Monchengladbach @ Away",
+      "cornersGet": [0, 1],
+      "cornersLost": [0, 20]
+    }
+  },
+  {
+    "team2": {
+      "name": "Werder Bremen @ Away",
+      "cornersGet": [11, 11],
+      "cornersLost": [30, 30]
+    }
+  },
+  {
+    "team2": {
+      "name": "Augsburg @ Away",
+      "cornersGet": [28, 14],
+      "cornersLost": [0, 13]
+    }
+  },
+  {
+    "team1": {
+      "name": "TSG Hoffenheim @ Home",
+      "cornersGet": [16, 0],
+      "cornersLost": [0, 33]
+    }
+  },
+  {
+    "team1": {
+      "name": "Wolfsburg @ Home",
+      "cornersGet": [27, 0],
+      "cornersLost": [41, 14]
+    }
+  },
+  {
+    "team1": {
+      "name": "SC Freiburg @ Home",
+      "cornersGet": [41, 11],
+      "cornersLost": [30, 51]
+    }
+  },
+  {
+    "team1": {
+      "name": "Heidenheim @ Home",
+      "cornersGet": [69, 14],
+      "cornersLost": [27, 13]
+    }
+  },
+  {
+    "team1": {
+      "name": "Darmstadt @ Home",
+      "cornersGet": [33, 66],
+      "cornersLost": [1, 0]
+    }
+  },
+  {
+    "team1": {
+      "name": "Union Berlin @ Home",
+      "cornersGet": [31, 31],
+      "cornersLost": [0, 10]
+    }
+  },
+  {
+    "team1": {
+      "name": "Bochum @ Home",
+      "cornersGet": [11, 11],
+      "cornersLost": [10, 51]
+    }
+  },
+  {
+    "team1": {
+      "name": "Mainz @ Home",
+      "cornersGet": [13, 27],
+      "cornersLost": [28, 14]
+    }
+  },
+  {
+    "team1": {
+      "name": "Cologne @ Home",
+      "cornersGet": [28, 14],
+      "cornersLost": [27, 27]
+    }
+  }
+]

@@ -1,74 +1,86 @@
-const groupElements1 = document.querySelectorAll(
-  ".highcharts-series.highcharts-tracker"
+// Find the Highcharts chart for the home team
+const homeChart = $("#home_distribution_chart").highcharts();
+
+// Extract the team name from the home chart's title
+const homeTeamName = homeChart.title.textStr;
+
+// Access the data for "Corner Get" and "Corner Lost" series for the home team
+const homeCornerGetSeries = homeChart.series.find(
+  (series) => series.name === "Corner Get"
 );
-const selectedGroups1 = [groupElements1[2], groupElements1[6]];
-
-const heightsCornersGet = [];
-
-selectedGroups1.forEach((groupElement) => {
-  const rectElements = groupElement.querySelectorAll("rect:nth-of-type(-n+2)");
-
-  rectElements.forEach((rectElement) => {
-    const height = parseFloat(rectElement.getAttribute("height"));
-    if (!isNaN(height)) {
-      heightsCornersGet.push(height);
-    }
-  });
-});
-
-const groupElements2 = document.querySelectorAll(
-  ".highcharts-series.highcharts-tracker"
+const homeCornerLostSeries = homeChart.series.find(
+  (series) => series.name === "Corner Lost"
 );
-const selectedGroups2 = [groupElements2[3], groupElements2[7]];
 
-const heightsCornersLost = [];
+// Extract the data points from the series for the home team
+const homeCornerGetData = homeCornerGetSeries.data.map((point) => point.y);
+const homeCornerLostData = homeCornerLostSeries.data.map((point) => point.y);
 
-selectedGroups2.forEach((groupElement) => {
-  const rectElements = groupElement.querySelectorAll("rect:nth-of-type(-n+2)");
+// Access the data at positions 0 and 1 for the home team
+const homeCornerGetFirstValue = homeCornerGetData[0];
+const homeCornerGetSecondValue = homeCornerGetData[1];
 
-  rectElements.forEach((rectElement) => {
-    const height = parseFloat(rectElement.getAttribute("height"));
-    if (!isNaN(height)) {
-      heightsCornersLost.push(height);
-    }
-  });
-});
+const homeCornerLostFirstValue = homeCornerLostData[0];
+const homeCornerLostSecondValue = homeCornerLostData[1];
 
-const textElements = document.querySelectorAll("text.highcharts-title");
+// Find the Highcharts chart for the away team
+const awayChart = $("#away_distribution_chart").highcharts();
 
-const textContent = [];
+// Extract the team name from the away chart's title
+const awayTeamName = awayChart.title.textStr;
 
-textElements.forEach((textElement) => {
-  const tspanElement = textElement.querySelector("tspan");
-  if (tspanElement) {
-    textContent.push(tspanElement.textContent.trim());
-  }
-});
+// Access the data for "Corner Get" and "Corner Lost" series for the away team
+const awayCornerGetSeries = awayChart.series.find(
+  (series) => series.name === "Corner Get"
+);
+const awayCornerLostSeries = awayChart.series.find(
+  (series) => series.name === "Corner Lost"
+);
 
-const data = {
+// Extract the data points from the series for the away team
+const awayCornerGetData = awayCornerGetSeries.data.map((point) => point.y);
+const awayCornerLostData = awayCornerLostSeries.data.map((point) => point.y);
+
+// Access the data at positions 0 and 1 for the away team
+const awayCornerGetFirstValue = awayCornerGetData[0];
+const awayCornerGetSecondValue = awayCornerGetData[1];
+
+const awayCornerLostFirstValue = awayCornerLostData[0];
+const awayCornerLostSecondValue = awayCornerLostData[1];
+
+// Create objects with the extracted data for both teams
+const homeData = {
   team1: {
-    name: textContent[0],
-    cornersGet: [heightsCornersGet[0], heightsCornersGet[1]],
-    cornersLost: [heightsCornersLost[0], heightsCornersLost[1]],
-  },
-  team2: {
-    name: textContent[1],
-    cornersGet: [heightsCornersGet[2], heightsCornersGet[3]],
-    cornersLost: [heightsCornersLost[2], heightsCornersLost[3]],
+    name: homeTeamName,
+    cornersGet: [homeCornerGetFirstValue, homeCornerGetSecondValue],
+    cornersLost: [homeCornerLostFirstValue, homeCornerLostSecondValue],
   },
 };
 
+const awayData = {
+  team2: {
+    name: awayTeamName,
+    cornersGet: [awayCornerGetFirstValue, awayCornerGetSecondValue],
+    cornersLost: [awayCornerLostFirstValue, awayCornerLostSecondValue],
+  },
+};
+
+// Merge the data for both teams into one object
+const data = { ...homeData, ...awayData };
+
+// Format the data as JSON
 const jsonData = JSON.stringify(data, null, 2);
 
+// Create a Blob and download link
 const blob = new Blob([jsonData], { type: "application/json" });
-
 const url = URL.createObjectURL(blob);
-
 const a = document.createElement("a");
 a.href = url;
 a.download = "data.json";
 
+// Trigger the download
 document.body.appendChild(a);
 a.click();
 
+// Revoke the URL to free up resources
 URL.revokeObjectURL(url);
