@@ -75,9 +75,9 @@ fetch("combined.json")
     sumsCornersGet.forEach((team) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-                          <td>${team.name || "-"}</td>
-                          <td>${team.normalizedSum.toFixed(2)}</td>
-                      `;
+                        <td>${team.name || "-"}</td>
+                        <td>${team.normalizedSum.toFixed(2)}</td>
+                    `;
       cornersGetTableBody.appendChild(row);
     });
 
@@ -88,9 +88,9 @@ fetch("combined.json")
     sumsCornersLost.forEach((team) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-                          <td>${team.name || "-"}</td>
-                          <td>${team.normalizedSum.toFixed(2)}</td>
-                      `;
+                        <td>${team.name || "-"}</td>
+                        <td>${team.normalizedSum.toFixed(2)}</td>
+                    `;
       cornersLostTableBody.appendChild(row);
     });
 
@@ -163,37 +163,72 @@ fetch("combined.json")
       },
       // Add more games here
     ];
+    // Function to calculate the game sums
+    // Function to calculate the game sums
+    function calculateGameSum(game) {
+      const team1Name = game.team1;
+      const team2Name = game.team2;
+
+      const team1CornersGetHome =
+        sumsCornersGet.find((team) => team.name === team1Name)?.normalizedSum ||
+        0;
+      const team2CornersLostAway =
+        sumsCornersLost.find((team) => team.name === team2Name)
+          ?.normalizedSum || 0;
+      const team1CornersLostHome =
+        sumsCornersLost.find((team) => team.name === team1Name)
+          ?.normalizedSum || 0;
+      const team2CornersGetAway =
+        sumsCornersGet.find((team) => team.name === team2Name)?.normalizedSum ||
+        0;
+
+      // Calculate the sum of normalized sums
+      const sumCornersGetForHomeTeam = (
+        team1CornersGetHome + team2CornersLostAway
+      ).toFixed(2);
+      const sumCornersGetForAwayTeam = (
+        team2CornersGetAway + team1CornersLostHome
+      ).toFixed(2);
+
+      return [
+        {
+          gameName: `${team1Name} vs ${team2Name}`,
+          value: sumCornersGetForHomeTeam,
+          team: "For Home Team",
+        },
+        {
+          gameName: `${team1Name} vs ${team2Name}`,
+          value: sumCornersGetForAwayTeam,
+          team: "For Away Team",
+        },
+      ];
+    }
 
     // Calculate and display the game sums
     const gameSumsTableBody = document.querySelector("#gameSumsTable tbody");
     gamesToAnalyze.forEach((game) => {
-      const gameSum = calculateGameSum(game);
-      const row = document.createElement("tr");
-      row.innerHTML = `
-                          <td>${gameSum.gameName}</td>
-                          <td>${gameSum.forHomeTeam}</td>
-                          <td>${gameSum.forAwayTeam}</td>
-                      `;
-      gameSumsTableBody.appendChild(row);
+      const gameSums = calculateGameSum(game);
+      gameSums.forEach((gameSum) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${gameSum.gameName}</td>
+        <td>${gameSum.value} ${gameSum.team}</td>
+    `;
+        gameSumsTableBody.appendChild(row);
+      });
     });
 
-    // Sort the "Game Sums" table by the bigger of the two numbers in descending order
+    // Sort the "Game Sums" table by the bigger of the two values in descending order
     const gameSumsTable = document.querySelector("#gameSumsTable");
     const gameSumsTableBodyRows = Array.from(
       gameSumsTable.querySelectorAll("tbody tr")
     );
 
     gameSumsTableBodyRows.sort((a, b) => {
-      const combinedSumA = Math.max(
-        parseFloat(a.children[1].textContent),
-        parseFloat(a.children[2].textContent)
-      );
-      const combinedSumB = Math.max(
-        parseFloat(b.children[1].textContent),
-        parseFloat(b.children[2].textContent)
-      );
+      const valueA = parseFloat(a.children[1].textContent.split(" ")[0]);
+      const valueB = parseFloat(b.children[1].textContent.split(" ")[0]);
 
-      return combinedSumB - combinedSumA;
+      return valueB - valueA;
     });
 
     gameSumsTableBody.innerHTML = "";
@@ -204,5 +239,4 @@ fetch("combined.json")
       }`;
       gameSumsTableBody.appendChild(row);
     });
-  })
-  .catch((error) => console.error("Error loading JSON:", error));
+  });
