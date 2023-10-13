@@ -1,0 +1,262 @@
+[
+  {
+    "team1": {
+      "name": "Arsenal @ Home",
+      "cornersGet": [3, 2],
+      "cornersLost": [1, 1]
+    },
+    "team2": {
+      "name": "Man City @ Away",
+      "cornersGet": [2, 3],
+      "cornersLost": [0, 1]
+    }
+  },
+  {
+    "team1": {
+      "name": "Brighton @ Home",
+      "cornersGet": [3, 3],
+      "cornersLost": [0.0001, 0]
+    },
+    "team2": {
+      "name": "Liverpool @ Away",
+      "cornersGet": [3, 3],
+      "cornersLost": [3, 3]
+    }
+  },
+  {
+    "team1": {
+      "name": "West Ham @ Home",
+      "cornersGet": [4, 1],
+      "cornersLost": [1, 5]
+    },
+    "team2": {
+      "name": "Newcastle @ Away",
+      "cornersGet": [1, 1],
+      "cornersLost": [3, 3]
+    }
+  },
+  {
+    "team1": {
+      "name": "Wolverhampton @ Home",
+      "cornersGet": [2, 1],
+      "cornersLost": [3, 2]
+    },
+    "team2": {
+      "name": "Aston Villa @ Away",
+      "cornersGet": [1, 2],
+      "cornersLost": [1, 5]
+    }
+  },
+  {
+    "team1": {
+      "name": "Crystal Palace @ Home",
+      "cornersGet": [0.0001, 0],
+      "cornersLost": [2, 3]
+    },
+    "team2": {
+      "name": "Nottm Forest @ Away",
+      "cornersGet": [0.0001, 0],
+      "cornersLost": [5, 4]
+    }
+  },
+  {
+    "team1": {
+      "name": "Burnley @ Home",
+      "cornersGet": [1, 4],
+      "cornersLost": [2, 0]
+    },
+    "team2": {
+      "name": "Chelsea @ Away",
+      "cornersGet": [1, 0],
+      "cornersLost": [4, 3]
+    }
+  },
+  {
+    "team1": {
+      "name": "Everton @ Home",
+      "cornersGet": [2, 2],
+      "cornersLost": [2, 6]
+    },
+    "team2": {
+      "name": "Bournemouth @ Away",
+      "cornersGet": [1, 2],
+      "cornersLost": [5, 3]
+    }
+  },
+  {
+    "team1": {
+      "name": "Fulham @ Home",
+      "cornersGet": [0, 6],
+      "cornersLost": [1, 2]
+    },
+    "team2": {
+      "name": "Sheff Utd @ Away",
+      "cornersGet": [0, 2],
+      "cornersLost": [2, 3]
+    }
+  },
+  {
+    "team1": {
+      "name": "Man Utd @ Home",
+      "cornersGet": [3, 5],
+      "cornersLost": [0.0001, 0]
+    },
+    "team2": {
+      "name": "Brentford @ Away",
+      "cornersGet": [0, 2],
+      "cornersLost": [1, 2]
+    }
+  },
+  {
+    "team1": {
+      "name": "Luton @ Home",
+      "cornersGet": [1, 2],
+      "cornersLost": [1, 2]
+    },
+    "team2": {
+      "name": "Tottenham @ Away",
+      "cornersGet": [2, 2],
+      "cornersLost": [1, 2]
+    }
+  },
+  {
+    "team1": {
+      "name": "Arsenal @ Away",
+      "cornersGet": [2, 2],
+      "cornersLost": [2, 2]
+    }
+  },
+  {
+    "team1": {
+      "name": "Brighton @ Away",
+      "cornersGet": [1, 1],
+      "cornersLost": [2, 2]
+    }
+  },
+  {
+    "team1": {
+      "name": "Burnley @ Away",
+      "cornersGet": [3, 2],
+      "cornersLost": [1, 0]
+    }
+  },
+  {
+    "team1": {
+      "name": "Crystal Palace @ Away",
+      "cornersGet": [0, 2],
+      "cornersLost": [0, 2]
+    }
+  },
+  {
+    "team1": {
+      "name": "Everton @ Away",
+      "cornersGet": [2, 1],
+      "cornersLost": [5, 2]
+    }
+  },
+  {
+    "team1": {
+      "name": "Fulham @ Away",
+      "cornersGet": [2, 5],
+      "cornersLost": [2, 3]
+    }
+  },
+  {
+    "team1": {
+      "name": "Luton @ Away",
+      "cornersGet": [2, 2],
+      "cornersLost": [2, 1]
+    }
+  },
+  {
+    "team1": {
+      "name": "Man Utd @ Away",
+      "cornersGet": [1, 4],
+      "cornersLost": [2, 0]
+    }
+  },
+  {
+    "team1": {
+      "name": "West Ham @ Away",
+      "cornersGet": [1, 3],
+      "cornersLost": [1, 1]
+    }
+  },
+  {
+    "team1": {
+      "name": "Wolverhampton @ Away",
+      "cornersGet": [1, 4],
+      "cornersLost": [1, 2]
+    }
+  },
+  {
+    "team1": {
+      "name": "Tottenham @ Home",
+      "cornersGet": [1, 0],
+      "cornersLost": [2, 3]
+    }
+  },
+  {
+    "team1": {
+      "name": "Aston Villa @ Home",
+      "cornersGet": [4, 3],
+      "cornersLost": [0.0001, 0]
+    }
+  },
+  {
+    "team1": {
+      "name": "Bournemouth @ Home",
+      "cornersGet": [2, 0],
+      "cornersLost": [1, 0]
+    }
+  },
+  {
+    "team1": {
+      "name": "Brentford @ Home",
+      "cornersGet": [2, 0],
+      "cornersLost": [1, 4]
+    }
+  },
+  {
+    "team1": {
+      "name": "Chelsea @ Home",
+      "cornersGet": [2, 1],
+      "cornersLost": [0, 2]
+    }
+  },
+  {
+    "team1": {
+      "name": "Liverpool @ Home",
+      "cornersGet": [4, 3],
+      "cornersLost": [1, 1]
+    }
+  },
+  {
+    "team1": {
+      "name": "Man City @ Home",
+      "cornersGet": [2, 4],
+      "cornersLost": [0, 1]
+    }
+  },
+  {
+    "team1": {
+      "name": "Newcastle @ Home",
+      "cornersGet": [2, 2],
+      "cornersLost": [1, 1]
+    }
+  },
+  {
+    "team1": {
+      "name": "Nottm Forest @ Home",
+      "cornersGet": [0, 2],
+      "cornersLost": [1, 5]
+    }
+  },
+  {
+    "team1": {
+      "name": "Sheff Utd @ Home",
+      "cornersGet": [0, 4],
+      "cornersLost": [2, 1]
+    }
+  }
+]

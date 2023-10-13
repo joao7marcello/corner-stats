@@ -4,7 +4,7 @@ function calculateSum(array) {
 }
 
 // Fetch the JSON data from combined.json
-fetch("combinedPL.json")
+fetch("combinedBR.json")
   .then((response) => response.json())
   .then((data) => {
     // Flatten the JSON data and create arrays for sums of Corners Get and Corners Lost
@@ -75,9 +75,9 @@ fetch("combinedPL.json")
     sumsCornersGet.forEach((team) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-                        <td>${team.name || "-"}</td>
-                        <td>${team.normalizedSum.toFixed(2)}</td>
-                    `;
+                          <td>${team.name || "-"}</td>
+                          <td>${team.normalizedSum.toFixed(2)}</td>
+                      `;
       cornersGetTableBody.appendChild(row);
     });
 
@@ -88,9 +88,9 @@ fetch("combinedPL.json")
     sumsCornersLost.forEach((team) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-                        <td>${team.name || "-"}</td>
-                        <td>${team.normalizedSum.toFixed(2)}</td>
-                    `;
+                          <td>${team.name || "-"}</td>
+                          <td>${team.normalizedSum.toFixed(2)}</td>
+                      `;
       cornersLostTableBody.appendChild(row);
     });
 
@@ -126,44 +126,44 @@ fetch("combinedPL.json")
     // List of games to analyze
     const gamesToAnalyze = [
       {
-        team1: "Liverpool @ Home",
-        team2: "Everton @ Away",
+        team1: "Fluminense @ Home	",
+        team2: "Corinthians @ Away",
       },
       {
-        team1: "Man City @ Home",
-        team2: "Brighton @ Away",
+        team1: "Santos @ Home",
+        team2: "Bragantino @ Away",
       },
       {
-        team1: "Nottm Forest @ Home",
-        team2: "Luton @ Away",
+        team1: "Palmeiras @ Home",
+        team2: "Atletico Mineiro @ Away",
       },
       {
-        team1: "Brentford @ Home",
-        team2: "Burnley @ Away",
+        team1: "Cruzeiro @ Home",
+        team2: "Flamengo @ Away",
       },
       {
-        team1: "Bournemouth @ Home",
-        team2: "Wolverhampton @ Away",
+        team1: "Vasco Da Gama RJ @ Home",
+        team2: "Fortaleza FC @ Away",
       },
       {
-        team1: "Newcastle @ Home",
-        team2: "Crystal Palace @ Away",
+        team1: "Goias @ Home",
+        team2: "Sao Paulo @ Away",
       },
       {
-        team1: "Chelsea @ Home",
-        team2: "Arsenal @ Away",
+        team1: "EC Bahia @ Home",
+        team2: "Internacional @ Away",
       },
       {
-        team1: "Sheff Utd @ Home",
-        team2: "Man Utd @ Away",
+        team1: "Coritiba @ Home",
+        team2: "Cuiaba @ Away",
       },
       {
-        team1: "Aston Villa @ Home",
-        team2: "West Ham @ Away",
+        team1: "Gremio @ Home",
+        team2: "Athletico Paranaense @ Away",
       },
       {
-        team1: "Tottenham @ Home",
-        team2: "Fulham @ Away",
+        team1: "America MG @ Home",
+        team2: "Botafogo RJ @ Away",
       },
       // Add more games here
     ];
@@ -215,9 +215,9 @@ fetch("combinedPL.json")
       gameSums.forEach((gameSum) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-        <td>${gameSum.gameName}</td>
-        <td>${gameSum.value} ${gameSum.team}</td>
-    `;
+          <td>${gameSum.gameName}</td>
+          <td>${gameSum.value} ${gameSum.team}</td>
+      `;
         gameSumsTableBody.appendChild(row);
       });
     });
